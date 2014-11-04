@@ -90,6 +90,14 @@ public class Magpie
   {
    response = "You don't say.";
   }
+  else if (whichResponse == 4)
+  {
+   response = "Cool";
+  }
+  else if (whichResponse == 5)
+  {
+   response = "Wow, pretty neat.";
+  }
 
   return response;
  }
