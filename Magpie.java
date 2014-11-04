@@ -49,6 +49,13 @@ public class Magpie
   {
    response = "He is a terrific teacher, truely.";
   }
+   else if (statement.indexOf("Dog") >= 0
+    || statement.indexOf("dog") >= 0
+    || statement.indexOf("Cat") >= 0
+    || statement.indexOf("cat") >= 0)
+  {
+   response = "That is a good pet to have. Very loyal indeed.";
+  }
   else
   {
    response = getRandomResponse();
