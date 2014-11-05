@@ -18,7 +18,7 @@ public class Magpie
   */
  public String getGreeting()
  {
-  return "Hello, let's talk.";
+  return "Hello, would you like to talk? If so, say yes";
  }
  
  /**
@@ -34,6 +34,10 @@ public class Magpie
   if (statement.indexOf("no") >= 0)
   {
    response = "Why so negative?";
+  }
+  if (statement.indexOf("yes") >= 0)
+  {
+   response = "Cool, Lets bigin.";
   }
   else if (statement.indexOf("mother") >= 0
     || statement.indexOf("father") >= 0
@@ -55,6 +59,10 @@ public class Magpie
     || statement.indexOf("cat") >= 0)
   {
    response = "That is a good pet to have. Very loyal indeed.";
+   }
+   else if (statement.trim().length() == 0)//trim method to deal with blank space responses by human
+   {
+   response = "Hmmm?...You typed blank spaces.";
   }
   else
   {
@@ -69,7 +77,7 @@ public class Magpie
   */
  private String getRandomResponse()
  {
-  final int NUMBER_OF_RESPONSES = 4;
+  final int NUMBER_OF_RESPONSES = 6;//changed to choose from more responses
   double r = Math.random();
   int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
   String response = "";
@@ -90,7 +98,7 @@ public class Magpie
   {
    response = "You don't say.";
   }
-  else if (whichResponse == 4)
+  else if (whichResponse == 4)//more basic responses added
   {
    response = "Cool";
   }
