@@ -18,7 +18,7 @@ public class Magpie
   */
  public String getGreeting()
  {
-  return "Hello, would you like to talk? If so, say yes";
+  return "Hello, would you like to talk? If so, say yes";//changed to ask if human would like to talk
  }
  
  /**
@@ -35,9 +35,17 @@ public class Magpie
   {
    response = "Why so negative?";
   }
-  if (statement.indexOf("yes") >= 0)
+  else if (statement.indexOf("yes") >= 0)//Added to respond to human wanting to talk
   {
    response = "Cool, Lets bigin.";
+  }
+  else if (statement.indexOf("idk") >= 0)//Added to respond to human response
+  {
+   response = "Well neither do I";//This could possibly deal with "Know" Vs "no" situations
+  }
+  else if (statement.indexOf("ok") >= 0)//Added to respond to human response
+  {
+   response = "Alright";
   }
   else if (statement.indexOf("mother") >= 0
     || statement.indexOf("father") >= 0
@@ -46,19 +54,19 @@ public class Magpie
   {
    response = "Tell me more about your family.";
   }
-  else if (statement.indexOf("Ted") >= 0
+  else if (statement.indexOf("Ted") >= 0//Computer recognises teacher's name 
     || statement.indexOf("Doug") >= 0
     || statement.indexOf("Kiang") >= 0
     || statement.indexOf("Landgraf") >= 0)
   {
-   response = "He is a terrific teacher, truely.";
+   response = "He is a terrific teacher, truely.";///Computer responds to teacher being mentioned
   }
-   else if (statement.indexOf("Dog") >= 0
+   else if (statement.indexOf("Dog") >= 0//Computer recognises pet being mentioned 
     || statement.indexOf("dog") >= 0
     || statement.indexOf("Cat") >= 0
     || statement.indexOf("cat") >= 0)
   {
-   response = "That is a good pet to have. Very loyal indeed.";
+   response = "That is a good pet to have. Tell me more.";//Computer responds to pet being mentioned
    }
    else if (statement.trim().length() == 0)//trim method to deal with blank space responses by human
    {
@@ -102,7 +110,7 @@ public class Magpie
   {
    response = "Cool";
   }
-  else if (whichResponse == 5)
+  else if (whichResponse == 5)//more basic responses added
   {
    response = "Wow, pretty neat.";
   }
