@@ -20,7 +20,12 @@ public class Magpie
  public String getResponse(String statement)
  {
   String response = "";
-  if (findKeyword(statement, "no") >= 0)
+  statement = statement.trim();
+   if (statement.length() == 0)
+   {
+     response = "You need to type something.";
+   }
+  else if (findKeyword(statement, "no") >= 0)
   {
    response = "Why so negative?";
   }
