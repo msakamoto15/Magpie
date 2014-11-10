@@ -1,4 +1,4 @@
-
+import java.util.Random;
 public class Magpie
 {
  /**
@@ -175,38 +175,27 @@ public class Magpie
  }
 
  
- private String getRandomResponse()
+  private String getRandomResponse ()
  {
-  final int NUMBER_OF_RESPONSES = 6;//changed to choose from more responses
-  double r = Math.random();
-  int whichResponse = (int)(r * NUMBER_OF_RESPONSES);
-  String response = "";
-  
-  if (whichResponse == 0)
-  {
-    response = "Interesting, tell me more.";
-  }
-  else if (whichResponse == 1)
-  {
-   response = "Hmmm.";
-  }
-  else if (whichResponse == 2)
-  {
-   response = "Do you really think so?";
-  }
-  else if (whichResponse == 3)
-  {
-   response = "You don't say.";
-  }
-  else if (whichResponse == 4)//more basic responses added
-  {
-   response = "Cool";
-  }
-  else if (whichResponse == 5)//more basic responses added
-  {
-   response = "Wow, pretty neat.";
-  }
-
-  return response;
+  Random r = new Random ();
+  return randomResponses [r.nextInt(randomResponses.length)];
  }
+  
+  
+ 
+ private String [] randomResponses = {"Interesting, tell me more",
+   "Hmmm.",
+   "Do you really think so?",
+   "You don't say.",
+   "Cool.",
+   "Wow, pretty neat.",
+   "I would love to hear more about that.",
+   "Oh wow!",
+   "Thats great!",
+   "Anything else?",
+ 
+ };
+ 
 }
+
+ 
