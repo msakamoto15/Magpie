@@ -197,5 +197,22 @@ public class Magpie
  };
  
 }
+//Magpie 5 pseudocode 
+//When a statement is made in past tense, ask the question in present tense. (Usually drop the "ed") (Ex: I walked the dog--Why did you walk the dog)
+//When the subject of the statement is "I", ask the question as "you". (I wanted to---why do you want to)
+//When the subject of the statement is "you", ask the question as "I". (Who are you?---Who am I?)
+//Start the question with "why".
+
+//I threw the ball to you.---Why did you throw the ball to me?
+//I have been waiting, Obi-Wan.---Why have you been waiting?
+//I was hoping we would meet.---Why were you hoping we would meet? (was to were)
+//We had not read the books.--Why had we not read the books?
+//You are intelligent.---Why am I intelligent?
+//I worked hard.---Why did you work hard?
+//I said you are intelligent.---Why did you say I was intelligent?
+//I tallied the results.---Why did you tally the results?
+
+
+
 
  
