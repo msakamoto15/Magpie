@@ -32,9 +32,37 @@ public class Magpie
       int psn = findKeyword (statement, "is", 0);
       String firstHalf = statement.substring(0, findKeyword(statement, "is", 0));
       String secondHalf = statement.substring(findKeyword(statement, "is", 0));
-      response = "Why is" + firstHalf + secondHalf;
+      response = "Why is " + firstHalf + secondHalf;
     }
-    
+     else if (findKeyword(statement,"are",0) >= 0) // There is an "are" in this statement.
+    {
+      System.out.println("is triggered.");
+      int psn = findKeyword (statement, "are", 0);
+      String firstHalf = statement.substring(0, findKeyword(statement, "are", 0));
+      String secondHalf = statement.substring(findKeyword(statement, "are", 0));
+      response = "Why are " + firstHalf + secondHalf;
+    }
+      else if (findKeyword(statement,"was",0) >= 0) // There is an "was" in this statement.
+    {
+      System.out.println("is triggered.");
+      int psn = findKeyword (statement, "was", 0);
+      String firstHalf = statement.substring(0, findKeyword(statement, "was", 0));
+      String secondHalf = statement.substring(findKeyword(statement, "was", 0));
+      response = "Why was " + firstHalf + secondHalf;
+    }
+      else if (findKeyword(statement,"were",0) >= 0) // There is an "were" in this statement.
+    {
+      System.out.println("is triggered.");
+      
+     
+      int psn = findKeyword (statement, "were", 0);
+      String firstHalf = statement.substring(0, findKeyword(statement, "were", 0));
+      String secondHalf = statement.substring(findKeyword(statement, "were", 0));
+      response = "Why were " + firstHalf + secondHalf;
+    }
+      
+     
+     
     else if (findKeyword(statement, "no") >= 0)
     {
       response = "Why so negative?";
